@@ -1,0 +1,12 @@
+{
+	"name": "DG-LAB",
+	"icons": [
+	  {
+		"src": "DG-LAB-Logo.jpg",
+		"type": "image/jpg",
+		"sizes": "512x512"
+	  }
+	],
+	"start_url": ".",
+	"display": "standalone"
+  }
