@@ -2,7 +2,7 @@
 
 ## Start
 
-Open inedx.html with Chromium browser.
+Open [index.html](index.html) with Chromium browser.
 
 ## Source
 
