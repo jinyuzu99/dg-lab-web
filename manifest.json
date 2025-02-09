@@ -1,12 +1,19 @@
 {
 	"name": "DG-LAB",
+	"start_url": ".",
+	"display": "standalone",
+	"background_color": "#111",
+	"theme_color": "ffe99d",
 	"icons": [
 	  {
-		"src": "DG-LAB-Logo.jpg",
-		"type": "image/jpg",
+		"src": "DG-LAB-Logo-x192.png",
+		"type": "image/png",
+		"sizes": "192x192"
+	  },
+	  {
+		"src": "DG-LAB-Logo-x512.png",
+		"type": "image/png",
 		"sizes": "512x512"
 	  }
-	],
-	"start_url": ".",
-	"display": "standalone"
+	]
   }
