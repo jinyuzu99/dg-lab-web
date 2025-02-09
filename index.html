@@ -2,15 +2,15 @@
 <html lang="en">
 
 <head>
-    <title>DG-LAB Web Client</title>
+    <title>DG-LAB</title>
     <meta charset="utf-8">
+	<meta name="description" content="DG-LAB" />
+	<meta name="keywords" content="DG-LAB, Coyote" />
+	<link rel="icon" href="DG-LAB-Logo-x512.png">
     <meta name="viewport"
         content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
     <meta name="format-detection" content="telephone=no">
     <meta content="initial-dpr=2,maximum-dpr=3" name="flexible" />
-	<link rel="icon" href="DG-LAB-Logo-x512.png">
-    <meta name="keywords" content="DG-LAB Web Client" />
-    <meta name="description" content="DG-LAB Web Client" />
     <link rel="stylesheet" href="style.css">
 	<link rel="manifest" href="manifest.json" />
 </head>
@@ -32,7 +32,7 @@
     <div class="container about-container normal-text-padding" style="color:#ffe99d">
         <div class="contain-item">
 			<img src="DG-LAB-Logo-x512.png" alt="DG-LAB Logo" style="width: 100px; height: 100px">
-            <h2>DG-LAB Web Client</h2>
+            <h2>DG-LAB</h2>
         </div>
         <div class="contain-item">
             <button onclick="toggleShowScanBT()" id="scanBTBtn" class="common-btn">Connect</button>
@@ -57,7 +57,11 @@
             <span>Tip: It is recommended to reconnect to a new device at least 10 seconds after each disconnection.
 				Improper disconnection of service communication between web pages and the system may result in <code>NetworkError: GATT Server is Error</code> in disconnected.
 				This is an issue between the system and hardware scheduling, which may cause the device light to turn white but cannot be written or disconnected after connection.
-				At this time, please refresh the page and restart Coyote, wait for 10 seconds, and then click the scan button again.</span>
+				At this time, please refresh the page and restart Coyote, wait for 10 seconds, and then click the scan button again.
+			</span>
+			<span>This is not the official client of DG-LAB.
+				<a href="https://github.com/DG-LAB-OPENSOURCE/DG-LAB-OPENSOURCE/tree/main/coyote/web">Source Code</a>
+			</span>
         </div>
     </div>
     <!--footer-->

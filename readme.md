@@ -1,4 +1,4 @@
-# DG-LAB Web Client
+# DG-LAB Web
 
 ## Start
 
