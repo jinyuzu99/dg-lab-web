@@ -2,18 +2,16 @@
 <html lang="en">
 
 <head>
-    <title>DG-LAB Dungeon-Lab</title>
+    <title>DG-LAB Web Client</title>
     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport"
         content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
     <meta name="format-detection" content="telephone=no">
     <meta content="initial-dpr=2,maximum-dpr=3" name="flexible" />
-    <meta name="apple-mobile-web-app-title" content="DG-LAB Dungeon-Lab">
-    <meta name="keywords" content="DG-LAB Dungeon-Lab" />
-    <meta name="description" content="DG-LAB Dungeon-Lab" />
+    <meta name="keywords" content="DG-LAB Web Client" />
+    <meta name="description" content="DG-LAB Web Client" />
 
     <link rel="stylesheet" href="style.css">
 
@@ -24,41 +22,43 @@
     <div class="overlay" id="overlay">
         <div class="loader" id="loader"></div>
         <div class="contain-item fixed-center visible-hidden " id="scanBT">
-            <h3>选择要连接的设备版本</h3>
+            <h3>Select device version</h3>
             <button onclick="scanBT(1)"
-                style="height: 40px;background-color: #ffe99d;width: 200px;border-radius: 10px;">coyote 2.0 scanning</button>
+                style="height: 40px;background-color: #ffe99d;width: 200px;border-radius: 10px;">Coyote 2.0</button>
             <button onclick="scanBT(2)"
-                style="height: 40px;background-color: #ffe99d;width: 200px;border-radius: 10px;">coyote 3.0 scanning</button>
+                style="height: 40px;background-color: #ffe99d;width: 200px;border-radius: 10px;">Coyote 3.0</button>
             <button onclick="toggleShowScanBT()" class="close-btn">X</button>
         </div>
     </div>
     <!--about-us-->
     <div class="container about-container normal-text-padding" style="color:#ffe99d">
         <div class="contain-item">
-            <h2>Coyote BLE Connection Test</h2>
+            <h2>DG-LAB Web Client</h2>
         </div>
         <div class="contain-item">
-            <button onclick="toggleShowScanBT()" id="scanBTBtn" class="common-btn">coyote devices scanning</button>
-            <button onclick="disconnect()" id="disconnectBtn" class="common-btn red-btn display-none">disconnect device</button>
+            <button onclick="toggleShowScanBT()" id="scanBTBtn" class="common-btn">Connect</button>
+            <button onclick="disconnect()" id="disconnectBtn" class="common-btn red-btn display-none">Disconnect</button>
         </div>
         <div class="contain-item" id="waveSelectAndPlay" onchange="changeWave()">
-            <span>Select the pulse to be sent to AB channel</span>
+            <span>AB channel Pulse</span>
             <select id="selectDevice" style="height: 40px;background-color: #ffe99d;width: 200px;">
-                <option value="a" selected>pulse A</option>
-                <option value="b">pulse B</option>
-                <option value="c">pulse C</option>
+                <option value="a" selected>Pulse A</option>
+                <option value="b">Pulse B</option>
+                <option value="c">Pulse C</option>
             </select>
 
-            <button onclick="startSending()" class="common-btn" id="startSendBtn">Start writing pulse</button>
-            <button onclick="stopSending()" class="common-btn red-btn display-none" id="stopSendBtn">Stop writing pulse</button>
+            <button onclick="startSending()" class="common-btn" id="startSendBtn">Start</button>
+            <button onclick="stopSending()" class="common-btn red-btn display-none" id="stopSendBtn">Stop</button>
             <!-- <button onclick="startSending(1)" class="common-btn">Start writing pulse of coyote 2.0</button>
             <button onclick="startSending(2)" class="common-btn">Start writing pulse of coyote 3.0</button> -->
         </div>
         <span class="logs-title">Connecting Log</span>
-        <div class="logs" id="logs">
-        </div>
+        <div class="logs" id="logs"></div>
         <div class="contain-item">
-            <span>Tip: It is recommended to reconnect to a new device at least 10 seconds after each disconnection. Improper disconnection of service communication between web pages and the system may result in NetworkError: GATT Server is Error in disconnected. This is an issue between the system and hardware scheduling, which may cause the device light to turn white but cannot be written or disconnected after connection. At this time, please refresh the page and restart Coyote, wait for 10 seconds, and then click the scan button again.</span>
+            <span>Tip: It is recommended to reconnect to a new device at least 10 seconds after each disconnection.
+				Improper disconnection of service communication between web pages and the system may result in <code>NetworkError: GATT Server is Error</code> in disconnected.
+				This is an issue between the system and hardware scheduling, which may cause the device light to turn white but cannot be written or disconnected after connection.
+				At this time, please refresh the page and restart Coyote, wait for 10 seconds, and then click the scan button again.</span>
         </div>
     </div>
     <!--footer-->
@@ -452,7 +452,7 @@
         window.onload = function () {
             addLogs('Page loading completed');
             addLogs('Device not yet connected');
-            showSuccessToast('Please click the scan button to start scanning');
+            showSuccessToast('Please click Connect to start scanning');
         }
 
     </script>
