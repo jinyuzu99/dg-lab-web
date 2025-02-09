@@ -15,7 +15,7 @@
     <meta name="keywords" content="DG-LAB Dungeon-Lab" />
     <meta name="description" content="DG-LAB Dungeon-Lab" />
 
-    <link rel="stylesheet" href="notyf.min.css">
+    <link rel="stylesheet" href="/static/style.css">
 
 </head>
 
@@ -62,7 +62,7 @@
         </div>
     </div>
     <!--footer-->
-    <script type="text/javascript" src="notyf.min.js"></script>
+    <script type="text/javascript" src="/static/script.js"></script>
     <script>
         let server; // Declare a global variable to store GATT server objects
         let count = 0; // AB channel writing counter
@@ -282,7 +282,7 @@
             //setBT();
         }
         function stopSending() {
-            // Stop Timer 
+            // Stop Timer
             count = 0;
             // Reset Counter
             addLogs('Stop writing pulse data')
@@ -362,7 +362,7 @@
                     .then(characteristicB => {
                         // writing to channel B
                         characteristicB.writeValue(hexStringToUint8Array(valueB))
-                        // write counter 
+                        // write counter
                         count++;
                         if (count % 100 === 0) {
                             addLogs('Write successful, write count' + count)

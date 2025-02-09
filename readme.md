@@ -1,4 +1,4 @@
-# DG-LAB Web Bluetooth Client
+# DG-LAB Web Client
 
 ## Start
 
